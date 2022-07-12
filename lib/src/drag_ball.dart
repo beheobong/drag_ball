@@ -249,10 +249,10 @@ class _DragballState extends State<Dragball> with TickerProviderStateMixin {
       }
     }
     _isBallHide = !_isBallHide;
-
-    widget.onPositionChanged(
-      _dragballPosition.copyWith(isHide: _isBallHide),
-    );
+// khi chuyển sang bên trái bị bug là bên phải
+//     widget.onPositionChanged(
+//       _dragballPosition.copyWith(isHide: _isBallHide),
+//     );
 
     setState(() {});
   }
